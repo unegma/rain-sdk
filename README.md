@@ -16,3 +16,7 @@ import { ExampleClass } from "@unegma/template-typescript-npm-utilities";`
 let exampleClass = new ExampleClass('Tim');
 console.log(exampleClass.sayHello());
 ```
+
+
+## todo
+* keep an eye that hardhat.d.ts isn't added to typechain folder
