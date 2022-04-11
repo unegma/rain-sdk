@@ -1,0 +1,32 @@
+{
+  "name": "@unegma/template-typescript-npm-utilities",
+  "version": "1.4.2",
+  "description": "Boilerplate for creating npm modules in Typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "bump--patch": "npm version patch",
+    "bump--minor": "npm version minor",
+    "initial-publish": "npm publish --access public",
+    "publish-npm": "npm publish",
+    "DEPLOY": "npm run build; npm run bump--patch; npm run publish-npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unegma/template-typescript-npm-utilities.git"
+  },
+  "keywords": [],
+  "author": "Unegma lTD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unegma/template-typescript-npm-utilities/issues"
+  },
+  "homepage": "https://github.com/unegma/template-typescript-npm-utilities#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
