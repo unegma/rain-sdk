@@ -1,7 +1,7 @@
 {
-  "name": "@unegma/template-typescript-npm-utilities",
-  "version": "1.4.2",
-  "description": "Boilerplate for creating npm modules in Typescript",
+  "name": "@unegma/rain-sdk",
+  "version": "1.0.0",
+  "description": "Rain SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
