@@ -1,1 +1,2 @@
-export { default as Addresses } from './Addresses';
+export { default as AddressBook } from './AddressBook';
+export { default as GatedNFT } from './GatedNFT';
