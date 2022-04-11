@@ -13,7 +13,7 @@
     "bump--minor": "npm version minor",
     "initial-publish": "npm publish --access public",
     "publish-npm": "npm publish",
-    "DEPLOY": "npm run build; npm run bump--patch; npm run publish-npm"
+    "DEPLOY": "rm -rf ./dist; npm run build; npm run bump--patch; npm run publish-npm"
   },
   "repository": {
     "type": "git",
