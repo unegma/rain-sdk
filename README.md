@@ -5,7 +5,7 @@ https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package
 
 Does not include tests and linting, but you should add them
 
-## Usage
+## Usage in Code
 `npm install @unegma/template-typescript-npm-utilities`
 
 And then in your code:
