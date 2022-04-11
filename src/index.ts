@@ -1,1 +1,1 @@
-export { default as ExampleClass } from './ExampleClass';
+export { default as Addresses } from './Addresses';
