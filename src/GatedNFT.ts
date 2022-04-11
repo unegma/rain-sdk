@@ -10,7 +10,7 @@ import AddressBook from './AddressBook';
 /**
  * GatedNFT
  */
-export class GatedNFT extends RainContract {
+export default class GatedNFT extends RainContract {
   public readonly gatedNFT: GatedNFTContract;
 
   constructor(address: string, signer: Signer) {
