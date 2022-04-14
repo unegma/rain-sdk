@@ -38,6 +38,7 @@ export default class GatedNFT extends RainContract {
       AddressBook.getAddressesForChainId(chainId).gatedNFTFactory,
       signer
     );
+    console.log(`gatedNFTFactory Address: ${AddressBook.getAddressesForChainId(chainId).gatedNFTFactory}`)
 
     const {
       config,
