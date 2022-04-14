@@ -1,6 +1,7 @@
 const addressBook = [
   {
-    chainId: 8001,
+    name: 'Mumbai',
+    chainId: 80001,
     addresses: {
       gatedNFTFactory: '0xD9AD3A87E4c1F604091c1A0E147c88B3A9E1B4ad',
       saleFactory: '0x7fbc27f1d14e0c59e2f4346b5166692659c4694d',
