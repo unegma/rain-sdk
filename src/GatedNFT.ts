@@ -39,6 +39,8 @@ export default class GatedNFT extends RainContract {
       signer
     );
     console.log(`gatedNFTFactory Address: ${AddressBook.getAddressesForChainId(chainId).gatedNFTFactory}`)
+    console.log(`signer:`, signer)
+    console.log(`args:`, args)
 
     const {
       config,
@@ -64,9 +66,7 @@ export default class GatedNFT extends RainContract {
     );
 
     const receipt = await tx.wait();
-
     const address = this.getNewChildFromReceipt(receipt, gatedNFTFactory);
-
     const gatedNFT = new GatedNFT(address, signer);
 
     // @ts-ignore
