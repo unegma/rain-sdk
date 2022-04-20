@@ -3,8 +3,8 @@ const addressBook = [
     name: 'Mumbai',
     chainId: 80001,
     addresses: {
-      gatedNFTFactory: '0xD9AD3A87E4c1F604091c1A0E147c88B3A9E1B4ad',
-      saleFactory: '0x7fbc27f1d14e0c59e2f4346b5166692659c4694d',
+      gatedNFTFactory: '0x87115DfC71B8e4691a692dbF6cDD8a54C12b208C',
+      saleFactory: '0xcb7A7ce54EE654A0018E7FC48ADa0C0DCF634a2C',
     },
   },
   {
@@ -28,19 +28,35 @@ const addressBook = [
 ];
 
 /**
- * AddressBook
+ * @public
+ * Type for all the addresses stored in the Book
+ */
+export type Addresses = {
+  redeemableERC20Factory: string;
+  verifyFactory: string;
+  verifyTierFactory: string;
+  erc20BalanceTierFactory: string;
+  erc20TransferTierFactory: string;
+  combineTierFactory: string;
+  erc721BalanceTierFactory: string;
+  gatedNFTFactory: string;
+  redeemableERC20ClaimEscrow: string;
+  noticeBoard: string;
+  emissionsERC20Factory: string;
+  saleFactory: string;
+};
+
+
+/**
+ *  @public
  */
 export default class AddressBook {
-
-  /**
-   * Get Addresses For Chain Id
-   * @param chainId
-   */
-  public static getAddressesForChainId(chainId: number) {
+  public static getAddressesForChainId = (chainId: number): Addresses => {
     const network = addressBook.find(n => n.chainId === chainId);
     if (!network?.addresses) {
       throw new Error('No deployed contracts for this chain.');
     }
-    return network.addresses;
-  }
+
+    return <Addresses>network.addresses;
+  };
 }
