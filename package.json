@@ -11,6 +11,7 @@
     "build": "tsc",
     "bump--patch": "npm version patch",
     "bump--minor": "npm version minor",
+    "bump--major": "npm version major",
     "initial-publish": "npm publish --access public",
     "publish-npm": "npm publish",
     "DEPLOY": "rm -rf ./dist; npm run build; npm run bump--patch; npm run publish-npm"
