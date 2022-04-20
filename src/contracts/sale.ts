@@ -1,5 +1,5 @@
 import { BigNumberish, BigNumber, Signer, ContractTransaction } from 'ethers';
-import { concat } from 'ethers/lib/utils';
+import { utils } from 'ethers';
 
 import {
   ERC20Config,
@@ -146,7 +146,7 @@ export default class Sale extends FactoryContract {
   public static afterBlockNumberConfig = (blockNumber: number): State => {
     return {
       sources: [
-        concat([
+        utils.concat([
           op(this.Opcode.BLOCK_NUMBER),
           op(this.Opcode.VAL, 0),
           op(this.Opcode.GREATER_THAN),
