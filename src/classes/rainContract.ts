@@ -44,7 +44,6 @@ export abstract class RainContract {
    * @returns The address for this contract
    */
   public static getBookAddress(chainId: number): string {
-    // @ts-ignore
     return AddressBook.getAddressesForChainId(chainId)[this.nameBookReference];
   }
 
@@ -59,11 +58,17 @@ export abstract class RainContract {
   public static getChainId = async (
     signerOrProvider: Signer | Provider
   ): Promise<number> => {
+    let id;
     if (signerOrProvider instanceof Signer) {
-      // @ts-ignore
-      return (await signerOrProvider.provider.getNetwork()).chainId;
+      id = (await signerOrProvider.provider?.getNetwork())?.chainId;
     } else {
-      return (await signerOrProvider.getNetwork()).chainId;
+      id = (await signerOrProvider.getNetwork()).chainId;
+    }
+
+    if (id) {
+      return id;
+    } else {
+      throw new Error('Cannot get the chain ID');
     }
   };
 }

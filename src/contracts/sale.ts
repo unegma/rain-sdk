@@ -52,9 +52,6 @@ export default class Sale extends FactoryContract {
     const _sale = Sale__factory.connect(address, signer);
 
     this.buy = _sale.buy;
-
-    // todo may be an issue here
-    // @ts-ignore
     this.refund = _sale.refund;
     this.calculatePrice = _sale.calculatePrice;
     this.claimFees = _sale.claimFees;
@@ -414,6 +411,7 @@ export interface BuyConfig {
  * @public
  */
 export interface Receipt {
+  price: BigNumberish;
   id: BigNumberish;
   feeRecipient: string;
   fee: BigNumberish;
