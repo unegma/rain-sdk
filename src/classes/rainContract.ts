@@ -1,6 +1,6 @@
 import { Signer, utils, BigNumberish, Overrides, CallOverrides } from 'ethers';
 import { Provider } from '@ethersproject/abstract-provider';
-import {AddressBook} from '../AddressBook';
+import AddressBook from '../AddressBook';
 
 // TODO: script to get events
 
